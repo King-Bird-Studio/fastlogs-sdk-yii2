@@ -1,0 +1,29 @@
+{
+  "name": "fastlog/yii2-sdk",
+  "description": "SDK for Yii2 fastlogs service",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Ruslan Gataulin",
+      "email": "r.gataulin@kingbird.ru"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "fastlog\\": "src/"
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "git@git.kingbird.ru:kingbirdprojects/fastlogs/fastlogs-sdk-php.git",
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "fastlogs/sdk:master-dev": "*"
+  }
+}
