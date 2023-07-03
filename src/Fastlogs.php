@@ -1,10 +1,10 @@
 <?php
 
-namespace fastlog;
+namespace fastlogsYii;
 
-use fastlog\sdk\Sender;
+use fastlogs\sdk\Sender;
 
-class Fastlog
+class Fastlogs
 {
     public static function add($data, $slug)
     {

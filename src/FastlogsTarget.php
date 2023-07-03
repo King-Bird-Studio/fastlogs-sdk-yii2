@@ -1,8 +1,8 @@
 <?php
 
-namespace fastlog;
+namespace fastlogsYii;
 
-use fastlog\sdk\Sender;
+use fastlogs\sdk\Sender;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\helpers\VarDumper;
@@ -12,7 +12,7 @@ use yii\web\Request;
 use yii\web\User;
 
 
-class FastlogTarget extends Target
+class FastlogsTarget extends Target
 {
     /**
      * @var string

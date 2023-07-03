@@ -18,15 +18,19 @@ PHP 5.6+, установленные расширения json и curl.
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:King-Bird-Studio/fastlogs-sdk-yii2.git"
-        }
+            "url": "https://github.com/King-Bird-Studio/fastlogs-sdk-php.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/King-Bird-Studio/fastlogs-sdk-yii2.git"
+        },
     ],
     .....
 }
 ```
 2. Подключить к проекту:
 ```bash
-composer require "fastlog/yii2-sdk:master-dev"
+composer require fastlogs/yii2-sdk:dev-main
 ```
 
 3. Добавьте целевой класс в конфигурацию приложения:
@@ -38,7 +42,7 @@ return [
 		    'traceLevel' => YII_DEBUG ? 3 : 0,
 		    'targets' => [
                 [
-                    'class' => 'fastlog\FastlogTarget',
+                    'class' => 'fastlogsYii\FastlogsTarget',
                     'levels' => ['error', 'warning'],
                     'slug' => 'You slug fastlog',
                 ],
@@ -54,8 +58,8 @@ return [
 Если нужно писать в отдельный лог:
 
 ```php
-use  fastlog\Fastlog;
+use  fastlogsYii\Fastlogs;
 
 $data = [123, 456, 'sldfkjsf'];
-Fastlog::add($data, 'jQpUFtifBZ');
+Fastlogs::add($data, 'jQpUFtifBZ');
 ```
